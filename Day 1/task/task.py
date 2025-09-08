@@ -2,11 +2,12 @@
 # - Day 1 --------------------------------------------------------------------------------------------------------------
 # - 4. Variables -------------------------------------------------------------------------------------------------------
 # -- 4.1 Create a variable:
-name = input("What is your name? ")
-print("Hello, " + name)
+username = input("What is your name? ")
+print("Hello, " + username)
 
 # -- 4.2 Check the length of the User Input:
-print("Total of characters in your name: " + str(len(name)))
+length = len(username)
+print("Total of characters in your name: " + str(length))
 
 # ----------------------------------------------------------------------------------------------------------------------
 
