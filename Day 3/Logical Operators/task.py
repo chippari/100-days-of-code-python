@@ -1,14 +1,7 @@
 
 # > Day 3 --------------------------------------------------------------------------------------------------------------
 # > 6. Python Pizza ----------------------------------------------------------------------------------------------------
-print("> 6. Logical Operators")
-
-# >> 6.1. Logical Operators (Exercise 1) ------------------------------------------------------------------------------------
-print("\n>> 6.1. Logical Operators (Exercise 1)")
-
-
-# ----------------------------------------------------------------------------------------------------------------------
-
+# >> 6.1. Logical Operators (Exercise 1) -------------------------------------------------------------------------------
 print("Welcome to the rollercoaster!")
 height = int(input("What is your height in cm? "))
 bill = 0
@@ -22,6 +15,8 @@ if height >= 120:
     elif age <= 18:
         bill = 7
         print("Youth tickets are $7.")
+    elif age >= 45 and age <= 55:
+        print("Everything is going to be ok. Have a free ride on us!")
     else:
         bill = 12
         print("Adult tickets are $12.")
@@ -34,3 +29,5 @@ if height >= 120:
 
 else:
     print("Sorry, you have to grow taller before you can ride.")
+
+# ----------------------------------------------------------------------------------------------------------------------
