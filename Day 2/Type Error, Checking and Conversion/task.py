@@ -41,4 +41,10 @@ print("Convert an int to a float:", float(123))
 # Type Conversion - Convert a float to an int:
 print("Convert an float to an int:", int(123.456))
 
+# --- 2.3.1 Type Conversion - Exercise:
+# Make this line of code run without errors:
+# Before: print("Number of letters in your name: " + len(input("Enter your name")))
+# After:
+print("Number of letters in your name: " + str(len(input("Enter your name: "))))
+
 # ----------------------------------------------------------------------------------------------------------------------
