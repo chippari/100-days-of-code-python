@@ -12,17 +12,23 @@ extra_cheese = input("Do you want extra cheese? Y or N: ").upper()
 bill = 0
 
 if size == "S":
-    bill = 15
+    bill += 15
     print(f"Small Pizza cost ${bill}")
 elif size == "M":
-    bill = 20
+    bill += 20
     print(f"Medium Pizza cost ${bill}")
-else:
-    bill = 25
+elif size == "L":
+    bill += 25
     print(f"Large Pizza cost ${bill}")
+else:
+    print("You typed something wrong!")
 
 if pepperoni == "Y":
-    pepperoni_price = 2
+    if size == "S":
+        pepperoni_price = 2
+    else:
+        pepperoni_price = 3
+
     bill += pepperoni_price
     print(f"Peperoni Additional cost ${pepperoni_price}")
 
