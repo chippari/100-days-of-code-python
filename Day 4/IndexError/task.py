@@ -28,4 +28,8 @@ print(f"fruits List: {fruits}")
 print(f"vegetables List: {vegetables}")
 print(f"Fruits & Vegetables List: {fruits_and_vegetables}")
 
+# Accessing the first fruit on fruits and vegetables list:
+print(f"First fruits in fruits and vegetables list: {fruits_and_vegetables[0][0]}")
+print(f"First vegetables in fruits and vegetables list: {fruits_and_vegetables[1][0]}")
+
 # ----------------------------------------------------------------------------------------------------------------------
