@@ -4,7 +4,7 @@
 print("\n> 1. Functions")
 
 # >> 1.1. Defining a new Function --------------------------------------------------------------------------------------
-print("\n>> 1.1. Defining a new Function:")
+print(">> 1.1. Defining a new Function:")
 
 # Defining a new Function:
 def my_function():
@@ -12,5 +12,17 @@ def my_function():
 
 # Calling the new Function:
 my_function()
+
+# > 2. While Loops -----------------------------------------------------------------------------------------------------
+print("\n> 1. While Loops")
+
+# Creating a While Loops:
+# >> 1.2. Creating While Loops -----------------------------------------------------------------------------------------
+print(">> 1.1. Creating While Loops:")
+
+i = 1
+while i <= 3:
+    print(f"Loop {i}")
+    i += 1
 
 # ----------------------------------------------------------------------------------------------------------------------
