@@ -1,7 +1,7 @@
 
-# > Day 5 --------------------------------------------------------------------------------------------------------------
-# > 1. Hangman Game Project (Step 1) -----------------------------------------------------------------------------------
-print("\n> 1. Hangman Game Project (Step 1)")
+# > Day 7 --------------------------------------------------------------------------------------------------------------
+# > 2. Hangman Game Project (Step 2) -----------------------------------------------------------------------------------
+print("\n> 2. Hangman Game Project (Step 2)")
 
 # Import Random Module:
 import random
@@ -9,28 +9,33 @@ import random
 # Word List to be guessed:
 word_list = ["aardvark", "baboon", "camel"]
 
-# >> 1.1. Step 1 (TO-DO 1) ---------------------------------------------------------------------------------------------
-print(">> 1.1. Step 1 (TO-DO 1):")
-# TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word. Then print it.
-
+# Chosen Word to be guessed:
 word_chosen = random.choice(word_list)
 print(f"The word chosen is: {word_chosen}")
 
-# >> 1.2. Step 1 (TO-DO 2) ---------------------------------------------------------------------------------------------
-print("\n>> 1.2. Step 1 (TO-DO 2):")
-# TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+# >> 2.1. Step 2 (TO-DO 1) ---------------------------------------------------------------------------------------------
+print(">> 2.1. Step 1 (TO-DO 1):")
+# TODO-1: Create a "placeholder" with the same number of blanks as the chosen_word
+
+placeholder = ""
+word_length = len(word_chosen)
+for position in range(word_length):
+    placeholder += "_"
+
+print(placeholder)
 
 user_guess = input("Guess a letter: ").lower()
 
-# >> 1.3. Step 1 (TO-DO 3) ---------------------------------------------------------------------------------------------
-print("\n>> 1.3. Step 1 (TO-DO 3):")
-# TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "Right" if it
-#  is, "Wrong" if it's not.
+# >> 2.2. Step 2 (TO-DO 2) ---------------------------------------------------------------------------------------------
+print("\n>> 2.2. Step 1 (TO-DO 2):")
+# TODO-2: Create a "display" that puts the guess letter in the right positions and _ in the rest of the string.
 
+display = ""
 for char in word_chosen:
     if char == user_guess:
-        print("Right")
+        display += char
     else:
-        print("Wrong")
+        display += "_"
 
+print(display)
 # ----------------------------------------------------------------------------------------------------------------------
