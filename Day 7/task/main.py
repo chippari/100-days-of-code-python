@@ -1,10 +1,67 @@
-
 # > Day 7 --------------------------------------------------------------------------------------------------------------
-# > 3. Hangman Game Project (Step 3) -----------------------------------------------------------------------------------
-print("\n> 3. Hangman Game Project (Step 3)")
+# > 4. Hangman Game Project (Step 4) -----------------------------------------------------------------------------------
+print("\n> 4. Hangman Game Project (Step 4)")
 
 # Import Random Module:
 import random
+
+# Set Body Stages:
+stages = [r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 
 # Word List to be guessed:
 word_list = ["aardvark", "baboon", "camel"]
@@ -13,11 +70,7 @@ word_list = ["aardvark", "baboon", "camel"]
 word_chosen = random.choice(word_list)
 print(f"The word chosen is: {word_chosen}")
 
-# >> 3.1. Step 3 (TO-DO 1 & 2) -----------------------------------------------------------------------------------------
-print(">> 3.1. Step 1 (TO-DO 1 & 2):")
-# TODO-1: - Use a while loop to let the user guess again.
-# TODO-2: Change the for loop so that you keep the previous correct letters in display.
-
+# Create a Placeholder for the Chosen Word:
 placeholder = ""
 word_length = len(word_chosen)
 for position in range(word_length):
@@ -25,6 +78,12 @@ for position in range(word_length):
 
 print(placeholder)
 
+# >> 4.1. Step 4 (TO-DO 1, 2 & 3) --------------------------------------------------------------------------------------
+print(">> 4.1. Step 4 (TO-DO 1, 2 & 3):")
+# TODO-1: - Create a variable called 'lives' to keep track of the number of lives left.
+#  Set 'lives' to equal 6.
+
+lives = 6
 game_over = False
 correct_chars = []
 
@@ -40,10 +99,24 @@ while not game_over:
             display += char
         else:
             display += "_"
-    
+
     print(display)
-    
+
+    # TODO-2: - If guess is not a letter in the chosen_word, Then reduce 'lives' by 1.
+    #  If lives goes down to 0 then the game should stop and it should print "You lose."
+    if user_guess not in word_chosen:
+        lives -= 1
+
+        if lives == 0:
+            game_over = True
+            print("\n********** You lose! **********")
+
     if "_" not in display:
         game_over = True
-        print("You win!")
+        print("\n********** You win! **********")
+
+    # TODO-3: - print the ASCII art from 'stages'
+    #  that corresponds to the current number of 'lives' the user has remaining.
+    print(stages[lives])
+
 # ----------------------------------------------------------------------------------------------------------------------
