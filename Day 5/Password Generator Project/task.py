@@ -19,30 +19,44 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 # >> 4.1. Password Generator Project (Easy Version) --------------------------------------------------------------------
 print("\n>> 4.1. Password Generator Project (Easy Version):")
 
-password = ""
+easy_generated_password = ""
 if nr_letters > 0:
-    for x in range(nr_letters):
-        password += letters[random.randint(0, len(letters) - 1)]
+    for char in range(nr_letters):
+        easy_generated_password += random.choice(letters)
 
 if nr_numbers > 0:
-    for x in range(nr_numbers):
-        password += numbers[random.randint(0, len(numbers) - 1)]
+    for number in range(nr_numbers):
+        easy_generated_password += random.choice(numbers)
 
 if nr_symbols > 0:
-    for x in range(nr_symbols):
-        password += symbols[random.randint(0, len(symbols) - 1)]
+    for symbol in range(nr_symbols):
+        easy_generated_password += random.choice(symbols)
 
-print(f"Your Easy Generated Password: {password}")
+print(f"Your Easy Generated Password: {easy_generated_password}")
 
 # >> 4.2. Password Generator Project (Hard Version) --------------------------------------------------------------------
 print("\n>> 4.2. Password Generator Project (Hard Version):")
 
-hard_password = ""
-for x in range(len(password)):
-    print(password[x])
+hard_generated_password_list = []
+if nr_letters > 0:
+    for char in range(nr_letters):
+        hard_generated_password_list.append(random.choice(letters))
 
+if nr_numbers > 0:
+    for number in range(nr_numbers):
+        hard_generated_password_list.append(random.choice(numbers))
 
-print(f"Your Hard Generated Password: {hard_password}")
+if nr_symbols > 0:
+    for symbol in range(nr_symbols):
+        hard_generated_password_list.append(random.choice(symbols))
+
+random.shuffle(hard_generated_password_list)
+
+hard_generated_password = ""
+for char in hard_generated_password_list:
+    hard_generated_password += char
+
+print(f"Your Hard Generated Password: {hard_generated_password}")
 
 
 # ----------------------------------------------------------------------------------------------------------------------
