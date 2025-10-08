@@ -1,5 +1,12 @@
-word_per_page = 0
+
+# > Day 13 -------------------------------------------------------------------------------------------------------------
+# > 5. Use Print -------------------------------------------------------------------------------------------------------
+print("\n> 5. Use Print")
+
 pages = int(input("Number of pages: "))
-word_per_page == int(input("Number of words per page: "))
+word_per_page = int(input("Number of words per page: "))
 total_words = pages * word_per_page
 print(total_words)
+
+
+# ----------------------------------------------------------------------------------------------------------------------
